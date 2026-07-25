@@ -1,0 +1,29 @@
+stages:
+  - test
+
+variables:
+  # Override these defaults in GitLab CI/CD variables for the target environment.
+  WEBMAIL_URL: ""
+  WEBMAIL_EMAIL: ""
+  WEBMAIL_PASSWORD: ""
+  INITIALS: ""
+  SELENIUM_GRID_URL: "http://selenium-hub:4444/wd/hub"
+
+run_task01:
+  stage: test
+  image: mcr.microsoft.com/playwright/python:v1.54.0-noble
+  script:
+    - pip install pytest pytest-playwright pytest-html psutil objgraph
+    - mkdir -p test-results
+    - >-
+      pytest task01.py --browser firefox
+      --html=report.html --self-contained-html
+      --junitxml=test-results/junit.xml
+  artifacts:
+    when: always
+    expire_in: 1 week
+    paths:
+      - report.html
+      - test-results/
+    reports:
+      junit: test-results/junit.xml
