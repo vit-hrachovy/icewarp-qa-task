@@ -88,7 +88,7 @@ def create_remove_doc(page: Page, doctype: str, docsuffix: str) -> None:
     page.get_by_text("Delete").click()
     expect(page.locator('h4:has-text("Delete confirmation")')).to_be_visible()
     page.get_by_role("button", name="Delete").click()
-    expect(page.locator('span:has-text("sample-doc.docx")')).to_have_count(0) # wait for new file no longer visible
+    expect(page.locator('span:has-text("sample-doc.' + docsuffix +'")')).to_have_count(0) # wait for new file no longer visible
 
 def test_task01(page: Page) -> None:
     '''
