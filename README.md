@@ -44,8 +44,9 @@ Imagine your test needs to be executed on schedule in a gitlab pipeline.
 - Pipeline needs to have prepared variables – url of the website, address of remote Selenium grid.
 - .yaml file has to upload test report into gitlab as artifact.
 
-## Project setup and test execution
+## Project setup and local test execution
 
+```
 mkdir project/playwright
 cd project/playwright
 virtualenv .
@@ -59,3 +60,4 @@ pip install pytest-html
 git clone https://github.com/vit-hrachovy/icewarp-qa-task plytest
 cd plytest
 WEBMAIL_URL='https://...' WEBMAIL_EMAIL='aaa@bbb' WEBMAIL_PASSWORD='hash' INITIALS='AB' PWDEBUG=1 pytest --headed --browser firefox --html=report.html task01.py
+```
