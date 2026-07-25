@@ -46,6 +46,8 @@ Imagine your test needs to be executed on schedule in a gitlab pipeline.
 
 ## Project setup and local test execution using debugger instance
 
+For INITIALS use login name initials.
+
 ```
 mkdir project/playwright
 cd project/playwright
