@@ -89,5 +89,7 @@ IceWarp server has API pointed to mail.example.com/icewarpapi
 Usage:
 
 ```
-ICEWARP_USERNAME='...' ICEWARP_PASSWORD='....'  ./icewarp_account_count.py  --api-url https://mail.example.com/icewarpapi/
+ICEWARP_USERNAME='...' \
+ICEWARP_PASSWORD='....'  \
+./icewarp_account_count.py  --api-url https://mail.example.com/icewarpapi/
 ```
