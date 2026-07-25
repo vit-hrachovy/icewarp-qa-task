@@ -7,7 +7,11 @@ from webmail_page import WebmailPage
 
 
 def test_task01(page: Page) -> None:
-    """Create and delete a document, spreadsheet, and presentation after logging in."""
+    """
+    Create and delete a document, spreadsheet, and presentation after logging in.
+
+    Minimum viable product. Robustness improvements needed for file name text input speed.
+    """
 
     webmail = WebmailPage(page, WebmailSettings.from_environment())
     webmail.login()
