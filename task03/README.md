@@ -64,6 +64,7 @@ FORM_URL='https://icewarp.com/' FORM_USERS=10 FORM_NAME='John Doe' FORM_EMAIL='j
 
 ## Unfinished, outstanding items:
 
+- Navigation instruction is outdated: 2. On left side of Primary menu, click on ‘Contact us’.
 - Submitting the form requires captcha.
-- Form is missing customer role.
+- Form is missing customer role mentioned in DB schema.
 - Form uses customer company input. DB schema is missing it.
