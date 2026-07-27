@@ -19,8 +19,11 @@ from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
 
-DEFAULT_API_URL = "https://mail.example.com/icewarpapi"
-DEFAULT_DOMAIN = "example.com"
+#DEFAULT_API_URL = "https://mail.example.com/icewarpapi"
+#DEFAULT_DOMAIN = "example.com"
+
+DEFAULT_API_URL = "https://iwqa01.onice.io/icewarpapi"
+DEFAULT_DOMAIN = "iwqa01.onice.io"
 PAGE_SIZE = 1_000
 
 
